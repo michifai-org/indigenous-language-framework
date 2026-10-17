@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1",
+  "notes": "Machine-readable description of the content tables. schema/README.md is the human explanation; if the two disagree, fix them together. List-valued cells use semicolons: w001;w002.",
+  "access_levels": ["open", "program", "restricted"],
+  "forms_columns": ["form_1", "form_2", "form_3"],
+  "tables": {
+    "sources": {
+      "file": "sources.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "description", "required": true},
+        {"name": "holder", "required": true},
+        {"name": "source_type", "required": true, "enum": ["archive", "speaker-recording", "publication", "community-created", "other"]},
+        {"name": "consent_status", "required": true, "enum": ["confirmed", "pending", "unknown", "withdrawn"]},
+        {"name": "permitted_uses", "required": true, "list_enum": ["teaching", "internal", "public"]},
+        {"name": "restrictions"},
+        {"name": "contact"},
+        {"name": "date"},
+        {"name": "notes"}
+      ]
+    },
+    "audio": {
+      "file": "audio.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "file", "required": true},
+        {"name": "kind", "required": true, "enum": ["sound", "word", "sentence", "text", "other"]},
+        {"name": "speaker_code"},
+        {"name": "recorded_date"},
+        {"name": "source_id", "required": true, "ref": "sources"},
+        {"name": "access", "required": true, "access": true},
+        {"name": "notes"}
+      ]
+    },
+    "grammar": {
+      "file": "grammar.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "name", "required": true},
+        {"name": "description", "required": true},
+        {"name": "pattern"},
+        {"name": "example_sentence_ids", "ref": "sentences", "list": true},
+        {"name": "prerequisite_ids", "ref": "grammar", "list": true},
+        {"name": "teacher_notes"},
+        {"name": "notes"}
+      ]
+    },
+    "words": {
+      "file": "words.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "form_1", "required": true},
+        {"name": "form_2"},
+        {"name": "form_3"},
+        {"name": "part_of_speech"},
+        {"name": "gloss", "required": true},
+        {"name": "gloss_note"},
+        {"name": "variety"},
+        {"name": "topic_tags", "list": true},
+        {"name": "grammar_ids", "ref": "grammar", "list": true},
+        {"name": "audio_id", "ref": "audio"},
+        {"name": "source_id", "required": true, "ref": "sources"},
+        {"name": "access", "required": true, "access": true},
+        {"name": "notes"}
+      ]
+    },
+    "sentences": {
+      "file": "sentences.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "form_1", "required": true},
+        {"name": "form_2"},
+        {"name": "form_3"},
+        {"name": "translation", "required": true},
+        {"name": "word_gloss"},
+        {"name": "word_ids", "ref": "words", "list": true},
+        {"name": "grammar_ids", "ref": "grammar", "list": true},
+        {"name": "topic_tags", "list": true},
+        {"name": "audio_id", "ref": "audio"},
+        {"name": "source_id", "required": true, "ref": "sources"},
+        {"name": "access", "required": true, "access": true},
+        {"name": "notes"}
+      ]
+    },
+    "texts": {
+      "file": "texts.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "title", "required": true},
+        {"name": "text_type"},
+        {"name": "file"},
+        {"name": "word_count"},
+        {"name": "level"},
+        {"name": "grammar_ids", "ref": "grammar", "list": true},
+        {"name": "topic_tags", "list": true},
+        {"name": "audio_id", "ref": "audio"},
+        {"name": "source_id", "required": true, "ref": "sources"},
+        {"name": "access", "required": true, "access": true},
+        {"name": "notes"}
+      ]
+    },
+    "sounds": {
+      "file": "sounds.csv",
+      "columns": [
+        {"name": "id", "required": true},
+        {"name": "order", "required": true},
+        {"name": "symbol_1", "required": true},
+        {"name": "symbol_2"},
+        {"name": "symbol_3"},
+        {"name": "description"},
+        {"name": "example_word_ids", "ref": "words", "list": true},
+        {"name": "audio_id", "ref": "audio"},
+        {"name": "notes"}
+      ]
+    }
+  },
+  "lesson": {
+    "directory": "lessons",
+    "required_keys": ["id", "order", "unit", "title", "level"],
+    "list_keys": {
+      "assumes_grammar": "grammar",
+      "introduces_grammar": "grammar",
+      "introduces_words": "words",
+      "introduces_sounds": "sounds",
+      "uses_sentences": "sentences",
+      "uses_texts": "texts"
+    }
+  }
+}

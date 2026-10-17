@@ -1,0 +1,21 @@
+# DEMONSTRATION ONLY. An invented language used to test the toolkit.
+# It is not based on any real language, community or recording.
+language:
+  name: "Demo language"
+  name_in_english: "Demo language (fictional)"
+  community: "None. Invented for the framework's examples."
+teaching_language: "English"
+varieties: []
+orthographies:
+  - column: form_1
+    name: "Main spelling (invented)"
+    notes: "Used first in lessons"
+  - column: form_2
+    name: "Alternate spelling (invented)"
+    notes: "Differs only in how one sound is written, to show two writing systems side by side"
+show_all_orthographies: true
+speaker_codes_kept_at: "Nowhere. spk-demo is not a real person"
+audio_storage: "None. No real audio exists"
+consent_records_at: "Not applicable"
+access_decisions_made_by: "Framework maintainers (demo only)"
+contact: ""

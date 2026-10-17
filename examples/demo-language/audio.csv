@@ -1,0 +1,2 @@
+id,file,kind,speaker_code,recorded_date,source_id,access,notes
+a001,audio/tumo.wav,word,spk-demo,,src001,open,Placeholder row. No real audio file exists. Run the checker with --check-files to see the warning

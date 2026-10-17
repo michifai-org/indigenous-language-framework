@@ -1,0 +1,8 @@
+id,form_1,form_2,form_3,part_of_speech,gloss,gloss_note,variety,topic_tags,grammar_ids,audio_id,source_id,access,notes
+w001,tumo,tumo,,noun,house,,,home,g01;g02,a001,src001,open,
+w002,sira,sira,,noun,river,,,land,g01;g02,,src001,open,
+w003,nako,naco,,noun,stone,,,land,,,src001,open,Not used in any lesson yet
+w004,pelu,pelu,,describing word,big,,,,g01,,src001,open,
+w005,manu,manu,,verb,see,,,,g02,,src001,open,
+w006,kisa,cisa,,pronoun,I,,,,g02,,src001,open,
+w007,taru,taru,,pronoun,you,,,,g02,,src001,open,

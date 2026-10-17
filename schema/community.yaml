@@ -1,0 +1,52 @@
+# community.yaml: the one file that tells the toolkit about YOUR language program.
+# Copy this into your own PRIVATE content folder and fill it in.
+# Lines starting with # are notes to you; they are ignored.
+# Everything here is your community's decision. Nothing is required except
+# the 'orthographies' section, because the other tables depend on it.
+
+# What the language is called, in the community's own words first.
+language:
+  name: ""             # your community's name for the language
+  name_in_english: ""  # how it is written in English, if different
+  community: ""        # nation, community or organisation running the program
+
+# The language the lessons are explained in (usually English and/or French).
+teaching_language: ""
+
+# Varieties or dialects you teach, if there is more than one. Leave empty if not relevant.
+# Example entries are just labels you choose.
+varieties: []
+
+# Writing systems. Each one you use gets a column in words.csv and sentences.csv:
+# form_1, form_2, form_3. Say which column holds which writing system.
+# Many languages have more than one writing system. You do not have to pick a "winner"
+# here. The first is simply the one shown first in generated materials.
+orthographies:
+  - column: form_1
+    name: ""           # e.g. what your community calls this writing system
+    notes: ""          # who uses it, where it came from, any limits
+  # - column: form_2
+  #   name: ""
+  #   notes: ""
+
+# Whether to show every writing system on lesson pages, or only the first.
+show_all_orthographies: true
+
+# People. Recordings and rows refer to speakers by a CODE, never by name (speaker_code
+# in audio.csv). Keep the list that links codes to people OUTSIDE this folder,
+# somewhere your community controls. Say here where it is kept, not what it says.
+speaker_codes_kept_at: ""
+
+# Where the audio files and consent records physically live.
+audio_storage: ""      # e.g. a local drive, a community server
+consent_records_at: "" # where signed consent or agreements are filed
+
+# Who may see what. These three levels are fixed by the toolkit (see PROTOCOLS.md):
+#   open       fine for learners and any lesson material
+#   program    teachers and program staff only
+#   restricted never used in generated lessons, flashcards or PDFs
+# Say in your own words who decides, and how someone asks to change a level.
+access_decisions_made_by: ""
+
+# Contact for questions about this content (a role or a group is better than one person).
+contact: ""

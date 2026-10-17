@@ -1,0 +1,5 @@
+id,form_1,form_2,form_3,translation,word_gloss,word_ids,grammar_ids,topic_tags,audio_id,source_id,access,notes
+s001,tumo pelu,tumo pelu,,The house is big.,house big,w001;w004,g01,home,,src001,open,
+s002,sira pelu,sira pelu,,The river is big.,river big,w002;w004,g01,land,,src001,open,
+s003,kisa sira manu,cisa sira manu,,I see the river.,I river see,w006;w002;w005,g02,land,,src001,open,
+s004,taru tumo manu,taru tumo manu,,You see the house.,you house see,w007;w001;w005,g02,home,,src001,open,

@@ -1,0 +1,2 @@
+id,title,text_type,file,word_count,level,grammar_ids,topic_tags,audio_id,source_id,access,notes
+t001,Placeholder text,dialogue,,6,1,g01;g02,land,,src001,open,A real text would have a file here. This row only shows the shape of the table
