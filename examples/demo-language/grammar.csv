@@ -1,0 +1,3 @@
+id,name,description,pattern,example_sentence_ids,prerequisite_ids,teacher_notes,notes
+g01,Naming a quality,A thing followed by a describing word says what the thing is like,THING + QUALITY,s001;s002,,No verb is needed in this pattern,
+g02,Saying who sees what,"Who sees, then what is seen, then the seeing word",WHO + WHAT + SEE,s003;s004,g01,The seeing word comes last,
